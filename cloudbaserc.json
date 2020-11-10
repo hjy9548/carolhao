@@ -1,1 +1,96 @@
-{carol：test}
+Skip to content
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@hjy9548 
+binggg
+/
+wordpress
+forked from zhoujunpeng/wordpress
+0
+02
+Code
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+wordpress/cloudbaserc.json
+@binggg
+binggg Update cloudbaserc.json
+Latest commit 1387647 3 days ago
+ History
+ 3 contributors
+@binggg@zhoujunpeng@chhpt
+65 lines (65 sloc)  1.58 KB
+  
+{
+  "version": "2.0",
+  "envId": "{{env.ENV_ID}}",
+  "framework": {
+    "name": "wordpress4",
+    "plugins": {
+      "client": {
+        "use": "@cloudbase/framework-plugin-container",
+        "inputs": {
+          "serviceName": "wordpress",
+          "servicePath": "/",
+          "uploadType": "image",
+          "containerPort": 80,
+          "imageInfo": {
+            "imageUrl": "wordpress:5.5.1"
+          },
+          "envVariables": {
+            "WORDPRESS_DB_HOST": "{{env.DB_IP}}:{{env.DB_PORT}}",
+            "WORDPRESS_DB_NAME": "wordpress"
+          },
+          "volumeMounts": {
+            "/var/www/html": "wordpress-cfs"
+          }
+        }
+      }
+    },
+    "requirement": {
+      "network": {
+        "regionId": 1
+      },
+      "tags": ["hehe","hehehe","hehehehe"],
+      "environment": {
+        "SECRET_TOKEN": {
+          "description": "A secret key for verifying the integrity of signed cookies.",
+          "required": true,
+          "default": "default_value",
+          "validation": {
+            "rule": {
+              "type": "RegExp",
+              "pattern": "[3-9]",
+              "flag": "ig"
+            },
+            "errorMessage": "数值范围3-9"
+          }
+        }
+      },
+      "addons": [
+        {
+          "type": "CFS",
+          "name": "wordpress-cfs"
+        },
+        {
+          "type": "CynosDB",
+          "name": "WordPress",
+          "envMap": {
+            "IP": "DB_IP",
+            "PORT": "DB_PORT",
+            "USERNAME": "WORDPRESS_DB_USER",
+            "PASSWORD": "WORDPRESS_DB_PASSWORD"
+          }
+        }
+      ]
+    }
+  }
+}
