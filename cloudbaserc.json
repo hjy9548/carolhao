@@ -44,7 +44,7 @@
                 {
                     "description": "A secret key for verifying the integrity of signed cookies.",
                     "required": true,
-                    "default": "default_value",
+                    "default": "3",
                     "validation":
                     {
                         "rule":
