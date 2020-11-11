@@ -1,34 +1,3 @@
-Skip to content
-Search or jump to…
-
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@hjy9548 
-binggg
-/
-wordpress
-forked from zhoujunpeng/wordpress
-0
-02
-Code
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-wordpress/cloudbaserc.json
-@binggg
-binggg Update cloudbaserc.json
-Latest commit 1387647 3 days ago
- History
- 3 contributors
-@binggg@zhoujunpeng@chhpt
-65 lines (65 sloc)  1.58 KB
-  
 {
   "version": "2.0",
   "envId": "{{env.ENV_ID}}",
