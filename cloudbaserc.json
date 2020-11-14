@@ -3,9 +3,9 @@
     "envId": "{{env.ENV_ID}}",
     "framework":
     {
+        "name": "carol-test-001",
         "plugins":
         {
-            "name": "carol-test-001",
             "carol-test-cloudbase":
             {
                 "use": "@cloudbase/framework-plugin-container",
