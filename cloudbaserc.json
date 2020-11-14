@@ -5,6 +5,7 @@
     {
         "plugins":
         {
+            "name": "carol-test-001",
             "carol-test-cloudbase":
             {
                 "use": "@cloudbase/framework-plugin-container",
