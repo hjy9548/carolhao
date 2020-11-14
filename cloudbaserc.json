@@ -10,13 +10,13 @@
                 "use": "@cloudbase/framework-plugin-container",
                 "inputs":
                 {
-                    "serviceName": "scene",
+                    "serviceName": "scene001",
                     "servicePath": "/",
                     "uploadType": "image",
                     "containerPort": 80,
                     "imageInfo":
                     {
-                        "imageUrl": "wordpress:5.5.1"
+                        "imageUrl": "ccr.ccs.tencentyun.com/cloudbase-apolo-env-test-146d5/hello-world:wordpress"
                     },
                     "envVariables":
                     {
