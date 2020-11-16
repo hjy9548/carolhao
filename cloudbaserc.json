@@ -1,1 +1,72 @@
-carol:test
+{
+    "version": "2.0",
+    "envId": "{{env.ENV_ID}}",
+    "framework":
+    {
+        "plugins":
+        {
+            "carol-test-cloudbase":
+            {
+                "use": "@cloudbase/framework-plugin-container",
+                "inputs":
+                {
+                    "serviceName": "scene003",
+                    "servicePath": "/",
+                    "uploadType": "image",
+                    "containerPort": 80,
+                    "imageInfo":
+                    {
+                        "imageUrl": "ccr.ccs.tencentyun.com/cloudbase-apolo-env-test-146d5/hello-world:wordpress"
+                    },
+                    "envVariables":
+                    {
+                        "WORDPRESS_DB_HOST": "{{env.DB_IP}}",
+                        "WORDPRESS_DB_NAME": "wordpress"
+                    },
+                    "volumeMounts":
+                    {
+                        "/var/www/html": "wordpress-cfs"
+                    }
+                }
+            }
+        },
+        "requirement":
+        {
+            "environment":
+            {
+                "SECRET_TOKEN":
+                {
+                    "description": "A secret key for verifying the integrity of signed cookies.",
+                    "required": true,
+                    "default": 3,
+                    "validation":
+                    {
+                        "rule":
+                        {
+                            "type": "RegExp",
+                            "pattern": "[3-9]",
+                            "flag": "ig"
+                        },
+                        "errorMessage": "数值范围3-9"
+                    }
+                }
+            },
+            "addons": [
+            {
+                "type": "CFS",
+                "name": "wordpress-cfs"
+            },
+            {
+                "type": "CynosDB",
+                "name": "wordpress",
+                "envMap":
+                {
+                    "IP": "DB_IP",
+                    "PORT": "DB_PORT",
+                    "USERNAME": "WORDPRESS_DB_USER",
+                    "PASSWORD": "WORDPRESS_DB_PASSWORD"
+                }
+            }]
+        }
+    }
+}
