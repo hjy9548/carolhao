@@ -11,8 +11,8 @@
                 "use": "@cloudbase/framework-plugin-container",
                 "inputs":
                 {
-                    "serviceName": "scene005",
-                    "servicePath": "/scene005",
+                    "serviceName": "scene003",
+                    "servicePath": "/scene003",
                     "uploadType": "image",
                     "containerPort": 80,
                     "imageInfo":
