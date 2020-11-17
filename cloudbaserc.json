@@ -3,7 +3,7 @@
     "envId": "{{env.ENV_ID}}",
     "framework":
     {
-        "name": "carol-test-007",
+        "name": "carol-test-008",
         "plugins":
         {
             "carol-test-cloudbase":
