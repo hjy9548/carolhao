@@ -3,7 +3,7 @@
     "envId": "{{env.ENV_ID}}",
     "framework":
     {
-        "name": "carol-test-011",
+        "name": "carol-test-012",
         "plugins":
         {
             "carol-test-cloudbase":
@@ -11,8 +11,8 @@
                 "use": "@cloudbase/framework-plugin-container",
                 "inputs":
                 {
-                    "serviceName": "scene011",
-                    "servicePath": "/scene011",
+                    "serviceName": "scene012",
+                    "servicePath": "/scene012",
                     "uploadType": "image",
                     "containerPort": 80,
                     "imageInfo":
@@ -21,7 +21,7 @@
                     },
                     "envVariables":
                     {
-                        "WORDPRESS_DB_HOST": "{{env.DB_IP}}",
+                        "WORDPRESS_DB_HOST": "{{env.DB_IP}}:{{env.DB_PORT}}",
                         "WORDPRESS_DB_NAME": "wordpress"
                     },
                     "volumeMounts":
