@@ -3,7 +3,7 @@
     "envId": "{{env.ENV_ID}}",
     "framework":
     {
-        "name": "carol-test-008",
+        "name": "carol-test-012",
         "plugins":
         {
             "carol-test-cloudbase":
@@ -11,13 +11,13 @@
                 "use": "@cloudbase/framework-plugin-container",
                 "inputs":
                 {
-                    "serviceName": "scene003",
-                    "servicePath": "/scene003",
+                    "serviceName": "scene013",
+                    "servicePath": "/scene013",
                     "uploadType": "image",
                     "containerPort": 80,
                     "imageInfo":
                     {
-                        "imageUrl": "ccr.ccs.tencentyun.com/cloudbase-apolo-env-test-146d5/hello-world:wordpress"
+                        "imageUrl": "wordpress:5.5.1"
                     },
                     "envVariables":
                     {
