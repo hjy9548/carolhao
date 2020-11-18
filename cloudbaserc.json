@@ -3,7 +3,7 @@
     "envId": "{{env.ENV_ID}}",
     "framework":
     {
-        "name": "carol-test-013",
+        "name": "carol-test-014",
         "plugins":
         {
             "carol-test-cloudbase":
@@ -11,8 +11,8 @@
                 "use": "@cloudbase/framework-plugin-container",
                 "inputs":
                 {
-                    "serviceName": "scene013",
-                    "servicePath": "/scene013",
+                    "serviceName": "scene014",
+                    "servicePath": "/scene014",
                     "uploadType": "image",
                     "containerPort": 80,
                     "imageInfo":
